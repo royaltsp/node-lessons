@@ -1,5 +1,6 @@
 //http module to create server
 const http = require("http");
+const PORT = 8000 || process.env.PORT;
 
 //create server and catch into server variable
 const server = http.createServer(function (req, res) {
@@ -39,6 +40,6 @@ const server = http.createServer(function (req, res) {
 });
 
 //listen for requests on port 8000
-server.listen(8000, function () {
+server.listen(PORT, function () {
   console.log("Server is listening");
 });
